@@ -7,9 +7,11 @@ import { Component } from '@angular/core';
   <h3>{{month}}/{{day}}/{{year}}</h3>
   <h1>Receipe book</h1>
   <ul>
-  <li *ngFor="let currentReceipe of receipes">{{currentReceipe.name}}:        <ol>
-  <li>{{currentReceipe.ingredients[0]}}</li><li> {{currentReceipe.ingredients[1]}}</li></ol></li>
-  </ul>
+    <li *ngFor="let currentReceipe of receipes">{{currentReceipe.name}}:
+      <ol>
+        <li *ngFor="let ingredient of currentReceipe.ingredients">{{ingredient}} </li>
+      </ol>
+    </ul>
   </div>
   `
 })
